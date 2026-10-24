@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Schafkopf</title>
+  <meta name="description" content="Schafkopf gegen drei Computergegner – Sauspiel, Wenz und Farbsolo.">
+  <meta name="theme-color" content="#1d4a2c">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="bar">
+    <h1>Schafkopf</h1>
+    <div class="bar-buttons">
+      <button id="btn-last" type="button">Letzter Stich</button>
+      <button id="btn-rules" type="button">Regeln</button>
+      <button id="btn-menu" type="button" aria-label="Menü">⋯</button>
+    </div>
+  </header>
+
+  <main id="table">
+    <section class="seat" data-seat="2"></section>
+    <section class="seat" data-seat="1"></section>
+    <section class="seat" data-seat="3"></section>
+
+    <section id="center">
+      <div id="contract"></div>
+      <div id="trick">
+        <div class="slot" data-seat="2"></div>
+        <div class="slot" data-seat="1"></div>
+        <div class="slot" data-seat="3"></div>
+        <div class="slot" data-seat="0"></div>
+      </div>
+      <div id="message" aria-live="polite"></div>
+    </section>
+
+    <section class="seat seat-me" data-seat="0"></section>
+    <div id="panel"></div>
+    <div id="hand"></div>
+  </main>
+
+  <dialog id="modal">
+    <div id="modal-body"></div>
+    <div class="modal-actions" id="modal-actions"></div>
+  </dialog>
+
+  <template id="rules">
+    <h2>Schafkopf – die Regeln kurz</h2>
+    <p>4 Spieler, 32 Karten, jeder bekommt 8. Wer spielt, braucht mit seiner Partei <b>mindestens 61 von 120 Augen</b>.</p>
+    <h3>Augen</h3>
+    <p>Sau 11 · Zehn 10 · König 4 · Ober 3 · Unter 2 · 9, 8, 7 je 0</p>
+    <h3>Spielarten</h3>
+    <ul>
+      <li><b>Sauspiel</b> (10 ct): Du rufst eine Sau (Eichel, Gras oder Schellen), die du selbst nicht hast. Von dieser Farbe musst du aber eine Karte haben. Wer die Sau hat, ist dein Partner, doch das weiß anfangs keiner. Trumpf: alle Ober, alle Unter, dann Herz.</li>
+      <li><b>Wenz</b> (50 ct): Nur die 4 Unter sind Trumpf. Du spielst allein gegen drei.</li>
+      <li><b>Farbsolo</b> (50 ct): Ober, Unter und die gewählte Farbe sind Trumpf. Du spielst allein gegen drei.</li>
+    </ul>
+    <p>Wollen mehrere spielen, gewinnt das höhere Spiel: Solo vor Wenz vor Sauspiel. Bei gleichem Spiel hat der Vorrang, der früher dran ist. Sagen alle „weiter“, wird zamgschmissn und neu gegeben.</p>
+    <h3>Trumpf-Reihenfolge</h3>
+    <p>Eichel-Ober, Gras-Ober, Herz-Ober, Schellen-Ober, Eichel-Unter … Schellen-Unter, dann Sau, Zehn, König, 9, 8, 7 der Trumpffarbe. Bei den anderen Farben gilt: Sau, Zehn, König, (Ober, Unter), 9, 8, 7.</p>
+    <h3>Bedienen</h3>
+    <p>Wird Trumpf ausgespielt, musst du Trumpf geben. Wird eine Farbe ausgespielt, musst du diese Farbe geben (Ober und Unter gehören dabei zum Trumpf). Kannst du nicht bedienen, darfst du stechen oder abwerfen.</p>
+    <h3>Rufsau</h3>
+    <ul>
+      <li>Wird die gerufene Farbe ausgespielt, muss die Sau kommen („gesucht“).</li>
+      <li>Die Rufsau darf nicht abgeworfen werden, außer im letzten Stich.</li>
+      <li>Wer die Sau hat, darf die Farbe nur mit der Sau anspielen. Ausnahme: Mit 4 oder mehr Karten der Farbe darf man „davonlaufen“.</li>
+    </ul>
+    <h3>Abrechnung</h3>
+    <p>Grundtarif plus 10 ct für <b>Schneider</b> (Verlierer ≤ 30 Augen), weitere 10 ct für <b>Schwarz</b> (Verlierer ohne Stich) und je 10 ct pro <b>Laufendem</b> (ab 3, beim Wenz ab 2). Beim Sauspiel zahlt jeder Verlierer einem Gewinner, beim Solo und Wenz zahlen die drei Gegner einzeln.</p>
+  </template>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

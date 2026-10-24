@@ -1,0 +1,21 @@
+Eigene Kartenbilder
+===================
+
+Wenn du hier Bilder ablegst, nimmt das Spiel sie statt der gezeichneten Karten.
+Erlaubt sind .jpg und .png. Das Bild sollte hochkant sein (etwa 100 × 160).
+
+Dateinamen:  <farbe>-<wert>.jpg
+
+  farbe:  eichel, gras, herz, schellen
+  wert:   sau, zehn, koenig, ober, unter, neun, acht, sieben
+
+Beispiele:   herz-ober.jpg   eichel-sau.png   schellen-sieben.jpg
+Rückseite:   rueckseite.jpg
+
+Du musst nicht alle 32 Karten austauschen: Fehlt ein Bild, wird die
+gezeichnete Karte verwendet.
+
+Achtung: Kartenbilder aus dem Internet sind oft urheberrechtlich geschützt.
+Für dich privat ist das in Ordnung. Veröffentlichst du die App aber
+(z. B. auf GitHub Pages), nimm nur Bilder, die du verwenden darfst, etwa
+eigene Fotos deiner Karten oder gemeinfreie Scans von Wikimedia Commons.
